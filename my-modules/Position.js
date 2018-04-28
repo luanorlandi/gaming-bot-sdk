@@ -1,8 +1,15 @@
-const distance = (a, b) => {
-  const x = a.x - b.x;
-  const y = a.y - b.y;
+class Position {
+  constructor(x = 0, y = 0) {
+    this.x = x;
+    this.y = y;
+  }
 
-  return Math.sqrt((x ** 2) + (y ** 2));
-};
+  distance(position) {
+    const x = this.x - position.x;
+    const y = this.y - position.y;
 
-export default distance;
+    return Math.sqrt((x ** 2) + (y ** 2));
+  }
+}
+
+export default Position;

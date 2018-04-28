@@ -1,7 +1,8 @@
-import distance from './Position';
+import Position from './Position';
 
 test('distance of (0, 0) to (3, 4)', () => {
-  const a = { x: 0, y: 0 };
-  const b = { x: 3, y: 4 };
-  expect(distance(a, b)).toBe(5);
+  const positionA = new Position(0, 0);
+  const positionB = new Position(3, 4);
+  const distance = positionA.distance(positionB);
+  expect(distance).toEqual(5);
 });
