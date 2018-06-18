@@ -1,22 +1,26 @@
 {
-  "name": "codingame-scripts",
+  "name": "codingame",
   "version": "1.0.0",
   "description": "Scripts for CodinGame platform",
-  "main": "index.js",
   "author": "luanorlandi <orlandi.luan@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jest": "^21.15.1",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "rollup": "^0.60.7",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0"
   },
   "scripts": {
     "start": "node",
     "test": "jest",
-    "build": "babel src -d build"
+    "build": "rollup -c"
   }
 }
