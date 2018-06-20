@@ -1,0 +1,20 @@
+{
+  "MAX_TURN": 200,
+  "SANITY_LOSS_ALONE": 3,
+  "SANITY_LOSS_ACCOMPANIED": 1,
+  "ACCOMPANIED_RANGE": 2,
+  "WANDERER_SPOOK_DAMAGE": 20,
+  "map": {
+    "MAP_WALL": "#",
+    "MAP_WANDERER": "w",
+    "MAP_EMPTY_CELL": "."
+  },
+  "constraints": {
+    "MIN_WIDTH": 10,
+    "MAX_WIDTH": 24,
+    "MIN_HEIGHT": 10,
+    "MAX_HEIGHT": 20,
+    "MIN_SPAWNS": 0,
+    "MAX_SPAWNS": 8
+  }
+}
