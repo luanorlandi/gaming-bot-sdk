@@ -4,7 +4,7 @@ export default class Position {
     this.y = y;
   }
 
-  distanceTo(position) {
+  distanceTo = (position) => {
     const x = this.x - position.x;
     const y = this.y - position.y;
 

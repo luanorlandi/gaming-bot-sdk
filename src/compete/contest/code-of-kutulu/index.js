@@ -1,5 +1,9 @@
 import constants from './constants.json';
+import Maze from './Maze';
 import Explorer from './Explorer';
+import Wanderer from './Wanderer';
+
+const { MAX_TURN, ENTITY_EXPLORER, ENTITY_WANDERER } = constants;
 
 parseInt(readline(), 10);
 const height = parseInt(readline(), 10);
@@ -10,36 +14,53 @@ for (let i = 0; i < height; i += 1) {
   rows.push(row);
 }
 
-const map = new Map(rows);
+const mazeInputs = readline().split(' ');
+const sanityLossLonely = parseInt(mazeInputs[0], 10);
+const sanityLossGroup = parseInt(mazeInputs[1], 10);
+const wandererSpawnTime = parseInt(mazeInputs[2], 10);
+const wandererLifeTime = parseInt(mazeInputs[3], 10);
 
-const inputs = readline().split(' ');
-const sanityLossLonely = parseInt(inputs[0], 10);
-const sanityLossGroup = parseInt(inputs[1], 10);
-const wandererSpawnTime = parseInt(inputs[2], 10);
-const wandererLifeTime = parseInt(inputs[3], 10);
+const maze = new Maze(
+  sanityLossLonely,
+  sanityLossGroup,
+  wandererSpawnTime,
+  wandererLifeTime,
+  rows,
+);
 
-printErr(inputs);
-printErr(sanityLossLonely);
-printErr(sanityLossGroup);
-printErr(wandererSpawnTime);
-printErr(wandererLifeTime);
+let turn = 0;
 
-// game loop
-while (true) {
+while (turn < MAX_TURN) {
+  const explorers = [];
+  const wanderers = [];
+
   const entityCount = parseInt(readline(), 10);
   for (let i = 0; i < entityCount; i += 1) {
-    const inputs = readline().split(' ');
-    const entityType = inputs[0];
-    const id = parseInt(inputs[1], 10);
-    const x = parseInt(inputs[2], 10);
-    const y = parseInt(inputs[3], 10);
-    const param0 = parseInt(inputs[4], 10);
-    const param1 = parseInt(inputs[5], 10);
-    const param2 = parseInt(inputs[6], 10);
+    const entityInputs = readline().split(' ');
+    const entityType = entityInputs[0];
+    const id = parseInt(entityInputs[1], 10);
+    const x = parseInt(entityInputs[2], 10);
+    const y = parseInt(entityInputs[3], 10);
+    const param0 = parseInt(entityInputs[4], 10);
+    const param1 = parseInt(entityInputs[5], 10);
+    const param2 = parseInt(entityInputs[6], 10);
 
-    const explorer = new Explorer(id, x, y);
-    explorer.values();
+    switch (entityType) {
+      case ENTITY_EXPLORER: {
+        const explorer = new Explorer(id, x, y, param0, param1, param2);
+        explorers.push(explorer);
+        break;
+      } case ENTITY_WANDERER: {
+        const wanderer = new Wanderer(id, x, y, param0, param1, param2);
+        wanderers.push(wanderer);
+        break;
+      } default: {
+        printErr(`Unknown entity type ${entityType}`);
+      }
+    }
   }
 
   print('WAIT');
+
+  turn += 1;
 }

@@ -6,9 +6,10 @@ export default class Unit {
     this.position = new Position(x, y);
   }
 
-  values() {
-    printErr('id: ', this.id);
-    printErr('position.x: ', this.position.x);
-    printErr('position.y: ', this.position.y);
-  }
+  closestUnit = units =>
+    units.reduce((closest, unit) => {
+      const distanceA = this.position.distanceTo(unit.position);
+      const distanceB = this.position.distanceTo(closest.position);
+      return distanceA < distanceB ? unit : closest;
+    });
 }
