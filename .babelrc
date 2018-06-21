@@ -1,8 +1,18 @@
 {
   "presets": [
-    ["env", {
-      "modules": false
-    }]
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ]
   ],
-  "plugins": ["external-helpers"]
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "transform-class-properties"
+      ]
+    }
+  }
 }
