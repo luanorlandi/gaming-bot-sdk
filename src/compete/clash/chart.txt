@@ -1,0 +1,29 @@
+getmetatable('').__index = function(str,i)
+    return string.sub(str,i,i)
+end
+
+S = {}
+
+N = tonumber(io.read())
+for i=0,N-1 do
+    table.insert(S, io.read())
+end
+
+M = tonumber(io.read())
+next_token = string.gmatch(io.read(), "[^%s]+")
+
+for i=0,M-1 do
+    H = tonumber(next_token())
+    
+    for j = 0, N-1 do
+        if j < H then
+            S[#S - j] = S[#S - j] .. '#'
+        else
+            S[#S - j] = S[#S - j] .. '.'
+        end
+    end
+end
+
+for i=1,N do
+    print(S[i])
+end
