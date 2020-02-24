@@ -1,4 +1,4 @@
-import Unit from './Unit';
+import Unit from './Unit.ts';
 
 test('closest from (0, 0) to [(0, 6), (3, 4)], (5, 2)', () => {
   const unit = new Unit(0, 0, 0);

@@ -1,13 +1,29 @@
 {
-  "extends": "airbnb-base",
-  "parser": "babel-eslint",
-  "plugins": ["jest"],
   "env": {
-    "jest/globals": true
+      "es6": true,
+      "node": true,
+      "jest/globals": true
   },
+  "extends": [
+      "eslint:recommended",
+      "airbnb-base",
+      "plugin:jest/recommended",
+      "plugin:@typescript-eslint/recommended"
+  ],
   "globals": {
-    "print": true,
-    "printErr": true,
-    "readline": true
-  }
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly",
+      "print": true,
+      "printErr": true,
+      "readline": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+  },
+  "plugins": [
+      "jest",
+      "@typescript-eslint"
+  ]
 }
