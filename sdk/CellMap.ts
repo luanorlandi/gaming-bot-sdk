@@ -1,11 +1,11 @@
 class CellMap<T> {
-  rows: Array<T>;
+  rows: Array<Array<T>>;
 
   width: number;
 
   height: number;
 
-  constructor(rows: Array<T>) {
+  constructor(rows: Array<Array<T>>) {
     this.rows = rows;
     this.width = rows[0].length;
     this.height = rows.length;

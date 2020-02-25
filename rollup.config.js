@@ -4,7 +4,7 @@ import json from 'rollup-plugin-json';
 import typescript from 'rollup-plugin-typescript';
 
 export default {
-  input: 'src/compete/contest/code-of-kutulu/index.js',
+  input: 'bot/index.js',
   output: {
     format: 'cjs',
   },

@@ -1,3 +1,4 @@
+// Code of Kutulu
 import constants from './constants.json';
 import Maze from './Maze';
 import Explorer from './Explorer';

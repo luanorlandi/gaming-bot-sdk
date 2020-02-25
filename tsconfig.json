@@ -5,7 +5,8 @@
       "preserveConstEnums": true
   },
   "include": [
-      "my-modules/**/*"
+      "sdk/**/*",
+      "bot/**/*",
   ],
   "exclude": [
       "node_modules",

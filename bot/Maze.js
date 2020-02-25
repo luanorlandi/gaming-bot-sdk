@@ -1,4 +1,4 @@
-import CellMap from './../../../../my-modules/CellMap';
+import CellMap from '../sdk/CellMap.ts';
 
 export default class Maze extends CellMap {
   constructor(
