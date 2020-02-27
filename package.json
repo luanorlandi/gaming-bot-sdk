@@ -5,6 +5,7 @@
   "author": "luanorlandi <orlandi.luan@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-typescript": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "babel-cli": "^6.26.0",
@@ -23,7 +24,6 @@
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-json": "^3.0.0",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-typescript": "^1.0.1",
     "typescript": "^3.8.2"
   },
   "scripts": {
