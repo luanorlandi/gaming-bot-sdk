@@ -8,8 +8,17 @@
       "eslint:recommended",
       "airbnb-base",
       "plugin:jest/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
       "plugin:@typescript-eslint/recommended"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["sdk", "bot"],
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
   "globals": {
       "Atomics": "readonly",
       "SharedArrayBuffer": "readonly",
@@ -25,5 +34,15 @@
   "plugins": [
       "jest",
       "@typescript-eslint"
-  ]
+  ],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ]
+  }
 }
