@@ -7,23 +7,22 @@
   "devDependencies": {
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "@rollup/plugin-typescript": "^3.0.0",
+    "@rollup/plugin-typescript": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.3",
-    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "clipboard-cli": "^1.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.8.0",
     "jest": "^22.4.3",
-    "rollup": "^1.31.1",
-    "rollup-plugin-babel": "^3.0.4",
+    "rollup": "^2.0.2",
+    "rollup-plugin-babel": "^4.4.0",
     "typescript": "^3.8.2"
   },
   "scripts": {
@@ -31,5 +30,9 @@
     "test": "jest",
     "build": "(rollup -c | clipboard) && echo '\\033[0;32mCopied to clipboard\\033[0m'",
     "tsc": "tsc"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7"
   }
 }
