@@ -1,4 +1,4 @@
-import Position from './Position.ts';
+import Position from './Position';
 
 test('distance of (0, 0) to (3, 4)', () => {
   const positionA = new Position(0, 0);
