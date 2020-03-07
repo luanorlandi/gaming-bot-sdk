@@ -5,6 +5,8 @@
   "author": "luanorlandi <orlandi.luan@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-typescript": "^4.0.0",
@@ -32,8 +34,5 @@
     "build": "(rollup -c | clipboard) && echo '\\033[0;32mCopied to clipboard\\033[0m'",
     "tsc": "tsc"
   },
-  "dependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7"
-  }
+  "dependencies": {}
 }
