@@ -1,4 +1,4 @@
-import Unit from '../sdk/Unit.ts';
+import Unit from '../packages/Unit';
 
 export default class Wanderer extends Unit {
   constructor(...props) {
