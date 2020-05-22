@@ -4,12 +4,14 @@
   "description": "Gaming bot SDK",
   "author": "luanorlandi <orlandi.luan@gmail.com>",
   "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@rollup/plugin-json": "^4.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "@rollup/plugin-typescript": "^4.0.0",
     "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "@typescript-eslint/parser": "^2.22.0",
@@ -26,12 +28,13 @@
     "jest": "^25.1.0",
     "rollup": "^2.0.2",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-typescript2": "^0.26.0",
     "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "node",
     "test": "jest",
-    "build": "(rollup -c | clipboard) && echo '\\033[0;32mCopied to clipboard\\033[0m'",
+    "build": "rollup -c",
     "tsc": "tsc"
   },
   "dependencies": {}

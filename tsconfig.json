@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-      "noImplicitAny": true,
-      "removeComments": true,
-      "preserveConstEnums": true
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "declarationDir": "dist/types"
   },
   "include": [
-      "packages/**/*",
-      "test/**/*"
+    "packages/**/*",
+    "test/**/*"
   ],
   "exclude": [
-      "node_modules",
-      "**/*.spec.ts"
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }

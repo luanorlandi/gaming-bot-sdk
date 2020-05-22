@@ -1,5 +1,9 @@
 // Code of Kutulu
-import constants from './constants.json';
+// import constants from './constants.json';
+const constants = { MAX_TURN: 1, ENTITY_EXPLORER: '1', ENTITY_WANDERER: '2' };
+const readline = () => ' ';
+const print = (string: string): void => {};
+const printErr = (string: string): void => {};
 import Maze from './Maze';
 import Explorer from './Explorer';
 import Wanderer from './Wanderer';
