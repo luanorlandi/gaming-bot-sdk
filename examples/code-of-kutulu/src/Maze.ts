@@ -1,4 +1,4 @@
-import CellMap from '../packages/CellMap';
+import { CellMap } from '@gaming-bot-sdk/core';
 
 export default class Maze extends CellMap<string> {
   private sanityLossLonely: number
@@ -12,7 +12,7 @@ export default class Maze extends CellMap<string> {
   constructor(
     sanityLossLonely: number,
     sanityLossGroup: number,
-    wandererSpawnTim: number,
+    wandererSpawnTime: number,
     wandererLifeTime: number,
     rows: string[][],
   ) {

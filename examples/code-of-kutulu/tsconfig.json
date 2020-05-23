@@ -7,8 +7,7 @@
     "declarationDir": "dist/types"
   },
   "include": [
-    "packages/**/*",
-    "test/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",

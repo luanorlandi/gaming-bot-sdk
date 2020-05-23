@@ -1,12 +1,12 @@
-// Code of Kutulu
 // import constants from './constants.json';
-const constants = { MAX_TURN: 1, ENTITY_EXPLORER: '1', ENTITY_WANDERER: '2' };
-const readline = () => ' ';
-const print = (string: string): void => {};
-const printErr = (string: string): void => {};
 import Maze from './Maze';
 import Explorer from './Explorer';
 import Wanderer from './Wanderer';
+
+const constants = { MAX_TURN: 1, ENTITY_EXPLORER: '1', ENTITY_WANDERER: '2' };
+const readline = (): string => '';
+const print = (string: string): string => string;
+const printErr = (string: string): string => string;
 
 const { MAX_TURN, ENTITY_EXPLORER, ENTITY_WANDERER } = constants;
 
@@ -15,7 +15,13 @@ const height = parseInt(readline(), 10);
 const rows = [];
 
 for (let i = 0; i < height; i += 1) {
-  const row = readline();
+  const input = readline();
+  const row = new Array(input.length);
+
+  for (let j = 0; j < row.length; j += 1) {
+    row[j] = input[j];
+  }
+
   rows.push(row);
 }
 

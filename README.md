@@ -1,3 +1,3 @@
-# Condingame
+# Gaming Bot SDK
 
-Development of scripts to solve puzzles and compete contest in [Condingame](https://www.codingame.com/).
+Development of algorithms to solve puzzles and compete contest in [Condingame](https://www.codingame.com/).
