@@ -1,5 +1,7 @@
 # Gaming Bot SDK
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 Development of algorithms to solve puzzles and compete contest in [Condingame](https://www.codingame.com/).
 
 # Contributing
