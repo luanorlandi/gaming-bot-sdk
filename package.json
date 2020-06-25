@@ -16,7 +16,9 @@
     "test": "jest",
     "build": "rollup -c",
     "tsc": "tsc",
-    "lerna": "lerna"
+    "lerna": "lerna",
+    "eslint": "eslint",
+    "lint": "eslint ./**/*.ts ./**/*.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
