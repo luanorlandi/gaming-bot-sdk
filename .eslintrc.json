@@ -1,15 +1,15 @@
 {
   "env": {
-      "es6": true,
-      "node": true,
-      "jest/globals": true
+    "es6": true,
+    "node": true,
+    "jest/globals": true
   },
   "extends": [
-      "eslint:recommended",
-      "airbnb-base",
-      "plugin:jest/recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+    "eslint:recommended",
+    "airbnb-base",
+    "plugin:jest/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "settings": {
     "import/resolver": {
@@ -20,21 +20,17 @@
     }
   },
   "globals": {
-      "Atomics": "readonly",
-      "SharedArrayBuffer": "readonly",
-      "print": true,
-      "printErr": true,
-      "readline": true
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "print": true,
+    "printErr": true,
+    "readline": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
-  "plugins": [
-      "jest",
-      "@typescript-eslint"
-  ],
   "rules": {
     "import/extensions": [
       "error",
