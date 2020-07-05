@@ -12,10 +12,7 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "install": "lerna bootstrap",
-    "start": "node",
-    "test": "jest",
-    "build": "rollup -c",
-    "tsc": "tsc",
+    "test": "lerna run test",
     "lerna": "lerna",
     "eslint": "eslint",
     "lint": "eslint ./**/*.ts ./**/*.js"
