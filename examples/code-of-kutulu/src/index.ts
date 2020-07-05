@@ -1,5 +1,5 @@
 // import constants from './constants.json';
-import Maze from './Maze';
+// import Maze from './Maze';
 import Explorer from './Explorer';
 import Wanderer from './Wanderer';
 
@@ -25,19 +25,19 @@ for (let i = 0; i < height; i += 1) {
   rows.push(row);
 }
 
-const mazeInputs = readline().split(' ');
-const sanityLossLonely = parseInt(mazeInputs[0], 10);
-const sanityLossGroup = parseInt(mazeInputs[1], 10);
-const wandererSpawnTime = parseInt(mazeInputs[2], 10);
-const wandererLifeTime = parseInt(mazeInputs[3], 10);
+// const mazeInputs = readline().split(' ');
+// const sanityLossLonely = parseInt(mazeInputs[0], 10);
+// const sanityLossGroup = parseInt(mazeInputs[1], 10);
+// const wandererSpawnTime = parseInt(mazeInputs[2], 10);
+// const wandererLifeTime = parseInt(mazeInputs[3], 10);
 
-const maze = new Maze(
-  sanityLossLonely,
-  sanityLossGroup,
-  wandererSpawnTime,
-  wandererLifeTime,
-  rows,
-);
+// const maze = new Maze(
+//   sanityLossLonely,
+//   sanityLossGroup,
+//   wandererSpawnTime,
+//   wandererLifeTime,
+//   rows,
+// );
 
 let turn = 0;
 
