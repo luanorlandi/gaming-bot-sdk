@@ -12,6 +12,7 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "install": "lerna bootstrap",
+    "build": "lerna run build",
     "test": "lerna run test",
     "lerna": "lerna",
     "eslint": "eslint",
