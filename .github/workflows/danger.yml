@@ -9,7 +9,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: Danger
-        run: npm run danger ci
+      - run: npm ci
+      - run: npm run danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
