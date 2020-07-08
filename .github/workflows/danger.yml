@@ -9,8 +9,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - name: install yarn
-        run: npm install -g yarn
       - name: Danger
         run: npm run danger ci
         env:
