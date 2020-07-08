@@ -1,0 +1,15 @@
+name: Danger
+on: [pull_request]
+jobs:
+  danger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        name: Use Node.js 10.x
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - run: npm ci
+      - run: npm run danger ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
