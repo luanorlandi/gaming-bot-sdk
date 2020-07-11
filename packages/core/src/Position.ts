@@ -14,13 +14,6 @@ class Position {
 
     return Math.sqrt((x ** 2) + (y ** 2));
   }
-
-  public distanceTo2 = (position: Position): number => {
-    const x = this.x - position.x;
-    const y = this.y - position.y;
-
-    return Math.sqrt((x ** 2) + (y ** 2));
-  }
 }
 
 export default Position;
