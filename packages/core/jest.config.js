@@ -1,4 +1,4 @@
 module.exports = {
   preset: 'ts-jest',
-  coverageReporters: ['json'],
+  coverageReporters: ['json-summary', 'json', 'lcov'],
 };
