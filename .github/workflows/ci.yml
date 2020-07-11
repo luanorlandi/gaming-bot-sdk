@@ -1,5 +1,5 @@
 name: CI
-on: [push, pull_request]
+on: [push]
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -11,5 +11,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run lint
-      - run: npm test:coverage
-      - run: npm run danger ci
+      - run: npm test
