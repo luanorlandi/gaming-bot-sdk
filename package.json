@@ -14,6 +14,7 @@
     "install": "lerna bootstrap",
     "build": "lerna run build",
     "test": "lerna run test",
+    "test:coverage": "lerna run test -- --coverage",
     "lerna": "lerna",
     "eslint": "eslint",
     "lint": "eslint ./**/*.ts ./**/*.js",
