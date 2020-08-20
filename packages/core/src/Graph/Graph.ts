@@ -1,3 +1,4 @@
+import { debugMap } from '../utils/debug';
 import Node from '../Node/Node';
 
 class Graph {
@@ -26,13 +27,28 @@ class Graph {
     }
   }
 
-  bfs(startId: number, endId: number): number[] | boolean {
+  bfs(startId: number, endId: number | number[]): number[] | false {
+    // normalize input
+    let endIdArray;
+    if (typeof endId === 'number') {
+      endIdArray = [endId];
+    } else {
+      endIdArray = endId;
+    }
+
+    // check if the graph has the node ids
+    if (typeof endIdArray === 'object' && endIdArray.length === 0) {
+      throw new Error('Search needs at least one ending node id in the array');
+    }
+
     if (!this.nodes.has(startId)) {
       throw new Error(`Graph does not have the node with id ${startId}`);
     }
 
-    if (!this.nodes.has(endId)) {
-      throw new Error(`Graph does not have the node with id ${endId}`);
+    const hasEndId = endIdArray.some((id) => this.nodes.has(id));
+
+    if (!hasEndId) {
+      throw new Error(`Graph does not have the node with id ${endId.toString()}`);
     }
 
     const unvisitedQueue: Node[] = [];
@@ -45,15 +61,18 @@ class Graph {
     while (unvisitedQueue.length > 0) {
       const visitingNode = unvisitedQueue.shift();
 
-      if (visitingNode.id === endId) {
-        const path = [endId];
-        let previousId = endId;
+      if (endIdArray.includes(visitingNode.id)) {
+        let previousId = visitingNode.id;
+        const endIdFound = visitingNode.id;
+        const path = [];
+        path.push(previousId);
 
+        // build path found from the start to the end
         while (previousId !== startId) {
           previousId = previousPath.get(previousId);
 
-          if (!previousId) {
-            throw new Error('Failed to create the path found');
+          if (typeof previousId === 'undefined') {
+            throw new Error(`Failed to create the path found from ${startId} to ${endIdFound}. Map: ${debugMap(previousPath)}`);
           }
 
           path.unshift(previousId);
@@ -64,7 +83,11 @@ class Graph {
 
       visitedQueue.set(visitingNode.id, visitingNode);
       visitingNode.links.forEach((childNode) => {
-        if (visitedQueue.has(childNode.id)) {
+        const hasVisited = visitedQueue.has(childNode.id);
+        const willVisited = unvisitedQueue.find((unvisitedNode) => (
+          unvisitedNode.id === childNode.id
+        ));
+        if (hasVisited || willVisited) {
           return;
         }
 
