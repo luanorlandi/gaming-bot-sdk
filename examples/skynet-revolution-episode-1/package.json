@@ -1,6 +1,6 @@
 {
   "name": "skynet-revolution-episode-1",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "",
   "main": "dist/cjs/index.js",
@@ -34,6 +34,6 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
-    "@gladosjs/core": "^0.0.0"
+    "@gladosjs/core": "^0.0.1"
   }
 }
