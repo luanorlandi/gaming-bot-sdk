@@ -1,4 +1,4 @@
-import { CellMap } from '@gaming-bot-sdk/core';
+import { CellMap } from '@gladosjs/core';
 
 export default class Maze extends CellMap<string> {
   private sanityLossLonely: number

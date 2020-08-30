@@ -33,6 +33,6 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
-    "@gaming-bot-sdk/core": "^0.0.0"
+    "@gladosjs/core": "^0.0.0"
   }
 }

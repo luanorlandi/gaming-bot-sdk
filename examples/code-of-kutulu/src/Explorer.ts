@@ -1,4 +1,4 @@
-import { Unit } from '@gaming-bot-sdk/core';
+import { Unit } from '@gladosjs/core';
 
 export default class Explorer extends Unit {
   private param0: number

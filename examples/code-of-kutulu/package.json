@@ -13,9 +13,6 @@
   "scripts": {
     "build": "rollup -c"
   },
-  "dependencies": {
-    "@gaming-bot-sdk/core": "*"
-  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
@@ -34,5 +31,8 @@
     "rollup-plugin-typescript2": "^0.27.1",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "@gladosjs/core": "^0.0.0"
   }
 }

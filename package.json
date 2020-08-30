@@ -1,15 +1,16 @@
 {
-  "name": "gaming-bot-sdk",
-  "version": "0.0.0",
-  "description": "Gaming bot SDK",
+  "name": "gladosjs",
+  "private": true,
+  "description": "Algorithm tools for gaming bot development",
   "author": {
     "name": "Luan Orlandi",
     "url": "https://github.com/luanorlandi"
   },
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luanorlandi/gladosjs/"
+  },
   "scripts": {
     "install": "lerna bootstrap",
     "build": "lerna run build",

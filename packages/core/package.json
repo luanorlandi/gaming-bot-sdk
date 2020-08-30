@@ -1,19 +1,22 @@
 {
-  "name": "@gaming-bot-sdk/core",
+  "name": "@gladosjs/core",
   "version": "0.0.0",
-  "description": "Core features of Gaming Bot SDK",
+  "description": "Core features of GLaDOS JS",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luanorlandi/gaming-bot-sdk/tree/develop/packages/core"
+    "url": "https://github.com/luanorlandi/gladosjs/tree/develop/packages/core"
   },
   "author": {
     "name": "Luan Orlandi",
     "url": "https://github.com/luanorlandi"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "node",
     "test": "jest",

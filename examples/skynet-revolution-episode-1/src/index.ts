@@ -1,4 +1,4 @@
-import { Graph } from '@gaming-bot-sdk/core';
+import { Graph } from '@gladosjs/core';
 
 /* eslint-disable no-console */
 /* eslint-disable radix */
