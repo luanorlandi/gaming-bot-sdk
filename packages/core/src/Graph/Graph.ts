@@ -15,6 +15,16 @@ class Graph {
     this.nodes.set(id2, node2);
   }
 
+  addDirectLink(id1: number, id2: number): void {
+    const node1 = this.nodes.get(id1) || { id: id1, links: new Map() } as Node;
+    const node2 = this.nodes.get(id2) || { id: id2, links: new Map() } as Node;
+
+    node1.links.set(id2, node2);
+
+    this.nodes.set(id1, node1);
+    this.nodes.set(id2, node2);
+  }
+
   removeLink(id1: number, id2: number): void {
     if (this.nodes.has(id1)) {
       const node1 = this.nodes.get(id1);
@@ -97,6 +107,37 @@ class Graph {
     }
 
     return false;
+  }
+
+  dfs(): number {
+    const deepth: Map<number, number> = new Map();
+
+    const calculateDeepth = (entries: IterableIterator<[number, Node]>): number => {
+      let nextEntry = entries.next();
+      let maxDeepth = 0;
+
+      while (!nextEntry.done) {
+        let [, visitingNode]: [number, Node] = nextEntry.value;
+        let deepthCalculated;
+
+        if (deepth.has(visitingNode.id)) {
+          deepthCalculated = deepth.get(visitingNode.id);
+        }
+
+        deepthCalculated = calculateDeepth(visitingNode.links.entries());
+        deepth.set(visitingNode.id, 1 + deepthCalculated);
+        maxDeepth = Math.max(maxDeepth, 1 + deepthCalculated);
+
+        nextEntry = entries.next();
+        if (!nextEntry.done) {
+          [, visitingNode] = nextEntry.value;
+        }
+      }
+
+      return maxDeepth;
+    };
+
+    return calculateDeepth(this.nodes.entries());
   }
 }
 

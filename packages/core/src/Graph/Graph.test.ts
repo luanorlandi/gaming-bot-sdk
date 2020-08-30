@@ -129,4 +129,42 @@ describe('Graph', () => {
       });
     });
   });
+
+  describe('when searching with dfs', () => {
+    describe('and when calculating deepth', () => {
+      it('should return 2 in a graph with two nodes', () => {
+        const graph = new Graph();
+
+        graph.addDirectLink(1, 2);
+
+        expect(graph.dfs()).toBe(2);
+      });
+
+      it('should return 3 in a graph with a V shape', () => {
+        const graph = new Graph();
+
+        graph.addDirectLink(1, 2);
+        graph.addDirectLink(1, 3);
+        graph.addDirectLink(2, 4);
+        graph.addDirectLink(3, 5);
+
+        expect(graph.dfs()).toBe(3);
+      });
+
+      it('should return 4 in a graph with complex shape', () => {
+        const graph = new Graph();
+
+        graph.addDirectLink(1, 2);
+        graph.addDirectLink(1, 3);
+        graph.addDirectLink(3, 4);
+        graph.addDirectLink(2, 4);
+        graph.addDirectLink(2, 5);
+        graph.addDirectLink(10, 11);
+        graph.addDirectLink(10, 1);
+        graph.addDirectLink(10, 3);
+
+        expect(graph.dfs()).toBe(4);
+      });
+    });
+  });
 });
