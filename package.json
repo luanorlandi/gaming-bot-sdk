@@ -16,6 +16,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "test:coverage": "lerna run test:coverage",
+    "publish": "lerna publish",
     "lerna": "lerna",
     "eslint": "eslint",
     "lint": "eslint ./**/*.ts ./**/*.js",
