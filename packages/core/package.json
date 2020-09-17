@@ -1,7 +1,7 @@
 {
   "name": "@gladosjs/core",
   "version": "0.0.1",
-  "description": "Core features of Glados JS JS",
+  "description": "Core features of Glados JS",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
